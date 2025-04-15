@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRẮC NGHIỆM TOÁN 11 - DÃY SỐ</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #a2d2ff;
+            --secondary-color: #ffcb77;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="text-3xl font-bold text-[#a2d2ff] flex items-center gap-2">
+                            <div class="relative">
+                                <!-- Book Base -->
+                                <i class="fas fa-book-open text-4xl"></i>
+                                
+                                <!-- Mathematical Symbols Overlay -->
+                                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center gap-1">
+                                    <span class="text-sm font-bold">→+→+</span>
+                                    <span class="text-sm font-bold">××</span>
+                                </div>
+                            </div>
+                            <span class="text-xl">TRẮC NGHIỆM TOÁN 11 - DÃY SỐ</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="text-[#a2d2ff] px-3 py-2 font-medium">Trang chủ</a>
+                    <a href="exercises.html" class="text-gray-900 hover:text-[#a2d2ff] px-3 py-2 font-medium">Bài tập</a>
+                    <a href="thi-thu.html" class="text-gray-900 hover:text-[#a2d2ff] px-3 py-2 font-medium">Thi thử</a>
+                    <a href="ho-so.html" class="text-gray-900 hover:text-[#a2d2ff] px-3 py-2 font-medium">Hồ sơ</a>
+                    <a href="gioi-thieu.html" class="text-gray-900 hover:text-[#a2d2ff] px-3 py-2 font-medium">Giới thiệu</a>
+                    <button class="bg-[#a2d2ff] text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-600">Đăng nhập</button>
+                    <button class="bg-blue-100 text-[#a2d2ff] px-4 py-2 rounded-lg font-medium hover:bg-blue-200">Đăng ký</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold text-gray-900 mb-8">
+                Luyện tập mỗi ngày – Tự tin chinh phục Toán 11
+            </h1>
+            <p class="text-xl text-gray-600 mb-12">
+                Hệ thống bài tập trắc nghiệm chuyên đề dãy số, cấp số cộng và cấp số nhân
+            </p>
+            <div class="flex justify-center gap-4">
+                <button class="bg-[#a2d2ff] text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-600">
+                    Bắt đầu luyện tập
+                </button>
+                <button class="bg-white text-gray-900 px-8 py-3 rounded-lg font-medium border border-gray-300 hover:bg-gray-50">
+                    Tìm hiểu thêm
+                </button>
+            </div>
+        </div>
+
+        <!-- Quick Access Section -->
+        <div class="mt-24">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2">
+                <i class="fas fa-sigma"></i>
+                Truy cập nhanh
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+                <!-- Cấp số cộng -->
+                <div class="bg-blue-50 rounded-xl p-6 hover:shadow-lg transition duration-300">
+                    <div class="text-[#a2d2ff] mb-4">
+                        <i class="fas fa-plus-minus text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Cấp số cộng</h3>
+                    <p class="text-gray-600 text-sm mb-4">Các bài tập về cấp số cộng a₁, a₁+d, a₁+2d, ...</p>
+                    <a href="#" class="text-[#a2d2ff] font-medium hover:text-blue-600">Bắt đầu →</a>
+                </div>
+
+                <!-- Cấp số nhân -->
+                <div class="bg-orange-50 rounded-xl p-6 hover:shadow-lg transition duration-300">
+                    <div class="text-[#ffcb77] mb-4">
+                        <i class="fas fa-xmark text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Cấp số nhân</h3>
+                    <p class="text-gray-600 text-sm mb-4">Các bài tập về cấp số nhân b₁, b₁q, b₁q², ...</p>
+                    <a href="#" class="text-[#ffcb77] font-medium hover:text-orange-600">Bắt đầu →</a>
+                </div>
+
+                <!-- Dãy số tổng quát -->
+                <div class="bg-purple-50 rounded-xl p-6 hover:shadow-lg transition duration-300">
+                    <div class="text-purple-500 mb-4">
+                        <i class="fas fa-chart-line text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Dãy số tổng quát</h3>
+                    <p class="text-gray-600 text-sm mb-4">Các bài tập về dãy số tổng quát x₁, x₂, x₃, ..., xₙ</p>
+                    <a href="#" class="text-purple-500 font-medium hover:text-purple-600">Bắt đầu →</a>
+                </div>
+
+                <!-- Luyện đề tổng hợp -->
+                <div class="bg-green-50 rounded-xl p-6 hover:shadow-lg transition duration-300">
+                    <div class="text-green-500 mb-4">
+                        <i class="fas fa-book text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Luyện đề tổng hợp</h3>
+                    <p class="text-gray-600 text-sm mb-4">Các đề tổng hợp kiến thức Σf(n)</p>
+                    <a href="#" class="text-green-500 font-medium hover:text-green-600">Bắt đầu →</a>
+                </div>
+
+                <!-- Thi thử theo thời gian -->
+                <div class="bg-red-50 rounded-xl p-6 hover:shadow-lg transition duration-300">
+                    <div class="text-red-500 mb-4">
+                        <i class="fas fa-clock text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Thi thử theo thời gian</h3>
+                    <p class="text-gray-600 text-sm mb-4">Làm bài thi thử có giới hạn thời gian</p>
+                    <a href="#" class="text-red-500 font-medium hover:text-red-600">Bắt đầu →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Section -->
+        <div class="mt-24">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2">
+                <i class="fas fa-chart-bar"></i>
+                Tiến độ học tập
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Cấp số cộng Progress -->
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-plus-minus text-[#a2d2ff]"></i>
+                            <h3 class="font-semibold">Cấp số cộng</h3>
+                        </div>
+                        <span class="text-[#a2d2ff] font-medium">75%</span>
+                    </div>
+                    <div class="h-2 bg-gray-200 rounded-full">
+                        <div class="h-2 bg-[#a2d2ff] rounded-full" style="width: 75%"></div>
+                    </div>
+                    <div class="mt-4 grid grid-cols-3 text-sm">
+                        <div class="text-center">
+                            <div class="font-medium">Cơ bản</div>
+                            <div class="text-gray-500">8/10</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-medium">Công sai</div>
+                            <div class="text-gray-500">7/10</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-medium">Tổng quát</div>
+                            <div class="text-gray-500">6/8</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cấp số nhân Progress -->
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-xmark text-[#ffcb77]"></i>
+                            <h3 class="font-semibold">Cấp số nhân</h3>
+                        </div>
+                        <span class="text-[#ffcb77] font-medium">60%</span>
+                    </div>
+                    <div class="h-2 bg-gray-200 rounded-full">
+                        <div class="h-2 bg-[#ffcb77] rounded-full" style="width: 60%"></div>
+                    </div>
+                    <div class="mt-4 grid grid-cols-3 text-sm">
+                        <div class="text-center">
+                            <div class="font-medium">Cơ bản</div>
+                            <div class="text-gray-500">6/10</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-medium">Công bội</div>
+                            <div class="text-gray-500">5/10</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-medium">Tổng quát</div>
+                            <div class="text-gray-500">4/8</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dãy số Progress -->
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-chart-line text-purple-500"></i>
+                            <h3 class="font-semibold">Dãy số tổng quát</h3>
+                        </div>
+                        <span class="text-purple-500 font-medium">40%</span>
+                    </div>
+                    <div class="h-2 bg-gray-200 rounded-full">
+                        <div class="h-2 bg-purple-500 rounded-full" style="width: 40%"></div>
+                    </div>
+                    <div class="mt-4 grid grid-cols-2 text-sm">
+                        <div class="text-center">
+                            <div class="font-medium">Tổng n số hạng</div>
+                            <div class="text-gray-500">4/10</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-medium">Dãy đặc biệt</div>
+                            <div class="text-gray-500">3/8</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tổng hợp Progress -->
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-book text-[#a2d2ff]"></i>
+                            <h3 class="font-semibold">Tổng hợp</h3>
+                        </div>
+                        <span class="text-[#a2d2ff] font-medium">25%</span>
+                    </div>
+                    <div class="h-2 bg-gray-200 rounded-full">
+                        <div class="h-2 bg-[#a2d2ff] rounded-full" style="width: 25%"></div>
+                    </div>
+                    <div class="mt-4 grid grid-cols-2 text-sm">
+                        <div class="text-center">
+                            <div class="font-medium">Bài tập</div>
+                            <div class="text-gray-500">2/10</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-medium">Thi thử</div>
+                            <div class="text-gray-500">1/8</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Today's Goals -->
+        <div class="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="col-span-2">
+                <h2 class="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2">
+                    <i class="fas fa-bullseye"></i>
+                    Mục tiêu học tập hôm nay
+                </h2>
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <div class="mb-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-gray-600">Hoàn thành các mục tiêu để tăng điểm thành tích</span>
+                            <span class="text-sm text-gray-500">2/3 mục tiêu</span>
+                        </div>
+                        <div class="h-2 bg-gray-200 rounded-full">
+                            <div class="h-2 bg-[#a2d2ff] rounded-full" style="width: 53%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Goal 1 -->
+                    <div class="mb-6">
+                        <div class="flex items-center gap-4 mb-2">
+                            <div class="w-6 h-6 rounded-full border-2 border-[#a2d2ff] flex items-center justify-center">
+                                <div class="w-4 h-4 bg-[#a2d2ff] rounded-full"></div>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-medium">Hoàn thành 5 bài tập cấp số cộng</span>
+                                    <span class="text-sm text-gray-500">3/5</span>
+                                </div>
+                                <div class="mt-2 h-1.5 bg-gray-200 rounded-full">
+                                    <div class="h-1.5 bg-[#a2d2ff] rounded-full" style="width: 60%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="ml-10 text-[#a2d2ff] font-medium hover:text-blue-600">Tiếp tục</button>
+                    </div>
+
+                    <!-- Goal 2 -->
+                    <div class="mb-6">
+                        <div class="flex items-center gap-4 mb-2">
+                            <div class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center">
+                                <div class="w-4 h-4 bg-gray-300 rounded-full"></div>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-medium">Làm 1 đề thi thử</span>
+                                    <span class="text-sm text-gray-500">0/1</span>
+                                </div>
+                                <div class="mt-2 h-1.5 bg-gray-200 rounded-full">
+                                    <div class="h-1.5 bg-gray-300 rounded-full" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="ml-10 text-[#a2d2ff] font-medium hover:text-blue-600">Tiếp tục</button>
+                    </div>
+
+                    <!-- Goal 3 -->
+                    <div>
+                        <div class="flex items-center gap-4 mb-2">
+                            <div class="w-6 h-6 rounded-full border-2 border-green-500 flex items-center justify-center">
+                                <i class="fas fa-check text-green-500"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-medium">Ôn tập công thức tổng n số hạng đầu tiên</span>
+                                    <span class="text-sm text-gray-500">1/1</span>
+                                </div>
+                                <div class="mt-2 h-1.5 bg-gray-200 rounded-full">
+                                    <div class="h-1.5 bg-green-500 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote Section -->
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2">
+                    <i class="fas fa-quote-left"></i>
+                    Trích dẫn hay
+                </h2>
+                <div class="bg-purple-50 rounded-xl p-6">
+                    <blockquote class="text-gray-800 italic mb-4">
+                        "Toán học là chiếc chìa khóa mở ra trí tuệ logic của mỗi người học sinh."
+                    </blockquote>
+                    <cite class="text-purple-600 font-medium">- Cô Nguyễn Thị Thu Loan</cite>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 mt-24">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-white">
+                <p>© 2024 TRẮC NGHIỆM TOÁN 11 - DÃY SỐ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Scripts -->
+    <script src="scripts.js"></script>
+</body>
+</html>
