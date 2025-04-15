@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu - TRẮC NGHIỆM TOÁN 11 - DÃY SỐ</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Montserrat:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #a2d2ff;
+            --secondary-color: #ffcb77;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="text-3xl font-bold text-[#a2d2ff] flex items-center gap-2">
+                            <div class="relative">
+                                <!-- Book Base -->
+                                <i class="fas fa-book-open text-4xl"></i>
+                                
+                                <!-- Mathematical Symbols Overlay -->
+                                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center gap-1">
+                                    <span class="text-sm font-bold">→+→+</span>
+                                    <span class="text-sm font-bold">××</span>
+                                </div>
+                            </div>
+                            <span class="text-xl md:inline">TRẮC NGHIỆM TOÁN 11 - DÃY SỐ</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-900 hover:text-[#a2d2ff] px-3 py-2 font-medium">Trang chủ</a>
+                    <a href="exercises.html" class="text-gray-900 hover:text-[#a2d2ff] px-3 py-2 font-medium">Bài tập</a>
+                    <a href="profile.html" class="text-gray-900 hover:text-[#a2d2ff] px-3 py-2 font-medium">Hồ sơ</a>
+                    <a href="about.html" class="text-[#a2d2ff] px-3 py-2 font-medium">Giới thiệu</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Teacher Profile -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <div class="md:flex">
+                <!-- Teacher Image -->
+                <div class="md:flex-shrink-0">
+                    <img class="h-96 w-full object-cover md:w-96" src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg" alt="Cô Nguyễn Thị Thu Loan">
+                </div>
+                <!-- Teacher Info -->
+                <div class="p-8">
+                    <div class="uppercase tracking-wide text-sm text-[#a2d2ff] font-semibold">Giáo viên Toán THPT</div>
+                    <h1 class="mt-2 text-3xl font-bold text-gray-900">Cô Nguyễn Thị Thu Loan</h1>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Với hơn 15 năm kinh nghiệm giảng dạy môn Toán tại các trường THPT, 
+                        cô Loan đã giúp hàng nghìn học sinh đạt kết quả cao trong các kỳ thi 
+                        quan trọng. Cô luôn tâm huyết với việc phát triển phương pháp giảng dạy 
+                        hiệu quả, giúp học sinh tiếp cận môn Toán một cách dễ dàng và thú vị nhất.
+                    </p>
+                    <div class="mt-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-graduation-cap text-[#a2d2ff] mr-2"></i>
+                            <span class="text-gray-700">Thạc sĩ Phương pháp giảng dạy Toán</span>
+                        </div>
+                        <div class="flex items-center mt-2">
+                            <i class="fas fa-award text-[#a2d2ff] mr-2"></i>
+                            <span class="text-gray-700">Giáo viên dạy giỏi cấp Thành phố</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Teaching Philosophy -->
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Teaching Methodology -->
+            <div class="bg-white rounded-lg shadow-sm p-6">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Phương pháp giảng dạy</h2>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <div class="h-8 w-8 rounded-full bg-[#a2d2ff] flex items-center justify-center">
+                                <i class="fas fa-brain text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">Phát triển tư duy logic</h3>
+                            <p class="mt-1 text-gray-600">
+                                Tập trung vào việc rèn luyện kỹ năng tư duy logic và giải quyết vấn đề 
+                                thông qua các bài tập thực tiễn.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <div class="h-8 w-8 rounded-full bg-[#ffcb77] flex items-center justify-center">
+                                <i class="fas fa-users text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">Học tập cá nhân hóa</h3>
+                            <p class="mt-1 text-gray-600">
+                                Xây dựng lộ trình học tập phù hợp với từng học sinh, 
+                                giúp phát huy tối đa tiềm năng của mỗi em.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <div class="h-8 w-8 rounded-full bg-[#a2d2ff] flex items-center justify-center">
+                                <i class="fas fa-laptop text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">Ứng dụng công nghệ</h3>
+                            <p class="mt-1 text-gray-600">
+                                Kết hợp phương pháp giảng dạy truyền thống với công nghệ hiện đại, 
+                                tạo môi trường học tập sinh động và hiệu quả.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Development Approach -->
+            <div class="bg-white rounded-lg shadow-sm p-6">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Định hướng phát triển</h2>
+                <div class="space-y-6">
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <h3 class="text-lg font-medium text-gray-900 mb-2">
+                            <i class="fas fa-chart-line text-[#a2d2ff] mr-2"></i>
+                            Phát triển năng lực
+                        </h3>
+                        <p class="text-gray-600">
+                            Tập trung vào việc phát triển các năng lực cốt lõi như tư duy logic, 
+                            khả năng giải quyết vấn đề và tự học.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <h3 class="text-lg font-medium text-gray-900 mb-2">
+                            <i class="fas fa-heart text-[#ffcb77] mr-2"></i>
+                            Rèn luyện phẩm chất
+                        </h3>
+                        <p class="text-gray-600">
+                            Chú trọng việc hình thành các phẩm chất tốt đẹp như tính trung thực, 
+                            tinh thần học hỏi và sự kiên trì.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <h3 class="text-lg font-medium text-gray-900 mb-2">
+                            <i class="fas fa-bullseye text-[#a2d2ff] mr-2"></i>
+                            Mục tiêu dài hạn
+                        </h3>
+                        <p class="text-gray-600">
+                            Không chỉ giúp học sinh đạt điểm cao trong các kỳ thi mà còn trang bị 
+                            kiến thức và kỹ năng cần thiết cho tương lai.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="mt-8 bg-white rounded-lg shadow-sm p-6">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Liên hệ</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="h-12 w-12 rounded-full bg-[#a2d2ff] bg-opacity-20 flex items-center justify-center">
+                            <i class="fas fa-envelope text-[#a2d2ff] text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-medium text-gray-900">Email</h3>
+                        <p class="text-gray-600">thuloan@example.com</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="h-12 w-12 rounded-full bg-[#ffcb77] bg-opacity-20 flex items-center justify-center">
+                            <i class="fas fa-phone text-[#ffcb77] text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-medium text-gray-900">Điện thoại</h3>
+                        <p class="text-gray-600">(024) 1234 5678</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="h-12 w-12 rounded-full bg-[#a2d2ff] bg-opacity-20 flex items-center justify-center">
+                            <i class="fas fa-location-dot text-[#a2d2ff] text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-medium text-gray-900">Địa chỉ</h3>
+                        <p class="text-gray-600">123 Đường ABC, Quận XYZ, Hà Nội</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 mt-12">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-white">
+                <p>© 2024 TRẮC NGHIỆM TOÁN 11 - DÃY SỐ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
