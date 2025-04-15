@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ sơ - TRẮC NGHIỆM TOÁN 11</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #a2d2ff;
+            --secondary-color: #ffcb77;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="text-3xl font-bold text-[#a2d2ff] flex items-center gap-2">
+                            <div class="relative">
+                                <!-- Book Base -->
+                                <i class="fas fa-book-open text-4xl"></i>
+                                
+                                <!-- Mathematical Symbols Overlay -->
+                                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center gap-1">
+                                    <span class="text-sm font-bold">→+→+</span>
+                                    <span class="text-sm font-bold">××</span>
+                                </div>
+                            </div>
+                            <span class="text-xl">TRẮC NGHIỆM TOÁN 11 - DÃY SỐ</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-900 hover:text-[#a2d2ff] px-3 py-2 font-medium">Trang chủ</a>
+                    <a href="exercises.html" class="text-gray-900 hover:text-[#a2d2ff] px-3 py-2 font-medium">Bài tập</a>
+                    <a href="thi-thu.html" class="text-gray-900 hover:text-[#a2d2ff] px-3 py-2 font-medium">Thi thử</a>
+                    <a href="ho-so.html" class="text-[#a2d2ff] px-3 py-2 font-medium">Hồ sơ</a>
+                    <a href="gioi-thieu.html" class="text-gray-900 hover:text-[#a2d2ff] px-3 py-2 font-medium">Giới thiệu</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Progress Overview -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Left Column - Progress -->
+            <div class="col-span-2 space-y-8">
+                <h2 class="text-2xl font-bold">Tiến độ học tập</h2>
+
+                <!-- Cấp số cộng -->
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-plus-minus text-[#a2d2ff] text-xl"></i>
+                        <h3 class="text-lg font-semibold">Cấp số cộng</h3>
+                        <span class="ml-auto text-[#a2d2ff] font-medium">75%</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="bg-blue-50 rounded-lg p-4">
+                            <h4 class="font-medium mb-2">Cơ bản</h4>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-[#a2d2ff] rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-4">
+                            <h4 class="font-medium mb-2">Công sai</h4>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-[#a2d2ff] rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-4">
+                            <h4 class="font-medium mb-2">Tổng quát</h4>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-[#a2d2ff] rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cấp số nhân -->
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-xmark text-[#ffcb77] text-xl"></i>
+                        <h3 class="text-lg font-semibold">Cấp số nhân</h3>
+                        <span class="ml-auto text-[#ffcb77] font-medium">60%</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="bg-orange-50 rounded-lg p-4">
+                            <h4 class="font-medium mb-2">Cơ bản</h4>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-[#ffcb77] rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-orange-50 rounded-lg p-4">
+                            <h4 class="font-medium mb-2">Công bội</h4>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-[#ffcb77] rounded-full" style="width: 55%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-orange-50 rounded-lg p-4">
+                            <h4 class="font-medium mb-2">Tổng quát</h4>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-[#ffcb77] rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dãy số tổng quát -->
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-chart-line text-purple-500 text-xl"></i>
+                        <h3 class="text-lg font-semibold">Dãy số tổng quát</h3>
+                        <span class="ml-auto text-purple-500 font-medium">40%</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-purple-50 rounded-lg p-4">
+                            <h4 class="font-medium mb-2">Tổng n số hạng</h4>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-purple-500 rounded-full" style="width: 45%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-purple-50 rounded-lg p-4">
+                            <h4 class="font-medium mb-2">Dãy đặc biệt</h4>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-purple-500 rounded-full" style="width: 35%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tổng hợp -->
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-book text-[#a2d2ff] text-xl"></i>
+                        <h3 class="text-lg font-semibold">Tổng hợp</h3>
+                        <span class="ml-auto text-[#a2d2ff] font-medium">25%</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-blue-50 rounded-lg p-4">
+                            <h4 class="font-medium mb-2">Bài tập</h4>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-[#a2d2ff] rounded-full" style="width: 30%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-4">
+                            <h4 class="font-medium mb-2">Thi thử</h4>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-[#a2d2ff] rounded-full" style="width: 20%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Profile -->
+            <div>
+                <!-- Profile Card -->
+                <div class="bg-white rounded-lg p-6 shadow-sm text-center">
+                    <div class="w-24 h-24 mx-auto mb-4 bg-[#a2d2ff] rounded-full flex items-center justify-center">
+                        <i class="fas fa-trophy text-white text-3xl"></i>
+                    </div>
+                    <h2 class="text-xl font-bold mb-1">Nguyễn Văn A</h2>
+                    <p class="text-gray-600 mb-4">Lớp 11A1</p>
+                    <div class="text-3xl font-bold text-[#a2d2ff] mb-2">850</div>
+                    <p class="text-gray-600 mb-4">Tổng điểm</p>
+                    <div class="bg-blue-100 text-[#a2d2ff] rounded-full py-1 px-4 inline-block font-medium mb-6">
+                        Hạng 4
+                    </div>
+                    <div class="bg-orange-100 text-orange-600 rounded-full py-1 px-4 inline-block font-medium">
+                        Cấp độ 5
+                    </div>
+                    <div class="mt-6">
+                        <div class="h-2 bg-gray-200 rounded-full">
+                            <div class="h-2 bg-[#a2d2ff] rounded-full" style="width: 70%"></div>
+                        </div>
+                        <p class="text-gray-600 text-sm mt-2">70% đến cấp độ tiếp theo</p>
+                    </div>
+                </div>
+
+                <!-- Achievements -->
+                <div class="mt-8">
+                    <h3 class="text-xl font-bold mb-4">Thành tích</h3>
+                    <p class="text-gray-600 mb-6">Huy hiệu và giải thưởng bạn đã đạt được</p>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="text-center">
+                            <div class="w-12 h-12 mx-auto mb-2 bg-[#a2d2ff] rounded-full flex items-center justify-center">
+                                <i class="fas fa-medal text-white text-xl"></i>
+                            </div>
+                            <p class="text-sm font-medium">Siêng năng</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 mx-auto mb-2 bg-[#ffcb77] rounded-full flex items-center justify-center">
+                                <i class="fas fa-star text-white text-xl"></i>
+                            </div>
+                            <p class="text-sm font-medium">Xuất sắc</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 mx-auto mb-2 bg-purple-500 rounded-full flex items-center justify-center">
+                                <i class="fas fa-book text-white text-xl"></i>
+                            </div>
+                            <p class="text-sm font-medium">Toàn diện</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 mx-auto mb-2 bg-gray-200 rounded-full flex items-center justify-center">
+                                <i class="fas fa-calculator text-gray-400 text-xl"></i>
+                            </div>
+                            <p class="text-sm font-medium">Nhà toán học</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 mx-auto mb-2 bg-gray-200 rounded-full flex items-center justify-center">
+                                <i class="fas fa-chart-line text-gray-400 text-xl"></i>
+                            </div>
+                            <p class="text-sm font-medium">Tiến bộ</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 mx-auto mb-2 bg-gray-200 rounded-full flex items-center justify-center">
+                                <i class="fas fa-plus text-gray-400 text-xl"></i>
+                            </div>
+                            <p class="text-sm font-medium">Thêm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 mt-12">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-white">
+                <p>© 2024 TRẮC NGHIỆM TOÁN 11 - DÃY SỐ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Scripts -->
+    <script src="scripts.js"></script>
+</body>
+</html>
