@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập - TRẮC NGHIỆM TOÁN 11 - DÃY SỐ</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Custom Animations -->
+    <script src="animations.js"></script>
+    
+    <!-- MathJax for LaTeX -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #a2d2ff;
+            --secondary-color: #ffcb77;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="text-3xl font-bold text-[#a2d2ff] flex items-center gap-2">
+                            <div class="relative">
+                                <!-- Book Base -->
+                                <i class="fas fa-book-open text-4xl"></i>
+                                
+                                <!-- Mathematical Symbols Overlay -->
+                                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center gap-1">
+                                    <span class="text-sm font-bold">→+→+</span>
+                                    <span class="text-sm font-bold">××</span>
+                                </div>
+                            </div>
+                            <span class="text-xl">TRẮC NGHIỆM TOÁN 11 - DÃY SỐ</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-900 hover:text-[#a2d2ff] px-3 py-2 font-medium">Trang chủ</a>
+                    <a href="exercises.html" class="text-[#a2d2ff] px-3 py-2 font-medium">Bài tập</a>
+                    <a href="thi-thu.html" class="text-gray-900 hover:text-[#a2d2ff] px-3 py-2 font-medium">Thi thử</a>
+                    <a href="ho-so.html" class="text-gray-900 hover:text-[#a2d2ff] px-3 py-2 font-medium">Hồ sơ</a>
+                    <a href="gioi-thieu.html" class="text-gray-900 hover:text-[#a2d2ff] px-3 py-2 font-medium">Giới thiệu</a>
+                    <button class="bg-[#a2d2ff] text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-600">Đăng nhập</button>
+                    <button class="bg-blue-100 text-[#a2d2ff] px-4 py-2 rounded-lg font-medium hover:bg-blue-200">Đăng ký</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Filters -->
+        <div class="bg-white rounded-lg shadow-sm p-6 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Bộ lọc bài tập</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Difficulty Filter -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Mức độ</label>
+                    <select class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-[#a2d2ff] focus:border-[#a2d2ff] rounded-md">
+                        <option>Tất cả</option>
+                        <option>Nhận biết</option>
+                        <option>Thông hiểu</option>
+                        <option>Vận dụng</option>
+                        <option>Vận dụng cao</option>
+                    </select>
+                </div>
+
+                <!-- Type Filter -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Dạng bài</label>
+                    <select class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-[#a2d2ff] focus:border-[#a2d2ff] rounded-md">
+                        <option>Tất cả</option>
+                        <option>Tính tổng</option>
+                        <option>Tìm công sai</option>
+                        <option>Tìm số hạng</option>
+                        <option>Chứng minh</option>
+                    </select>
+                </div>
+
+                <!-- Time Filter -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Thời gian</label>
+                    <select class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-[#a2d2ff] focus:border-[#a2d2ff] rounded-md">
+                        <option>Tất cả</option>
+                        <option>5 phút</option>
+                        <option>10 phút</option>
+                        <option>15 phút</option>
+                        <option>30 phút</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+<!-- Exercise Categories -->
+        <div class="space-y-8">
+            <!-- Overall Progress -->
+            <div class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-2xl font-bold text-gray-900">Tiến độ học tập</h2>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-sm font-medium text-gray-500">Tổng tiến độ:</span>
+                        <span class="text-lg font-bold text-[#a2d2ff]">30%</span>
+                    </div>
+                </div>
+                <div class="bg-gray-200 rounded-full h-2">
+                    <div class="progress-bar bg-gradient-to-r from-[#a2d2ff] via-[#ffcb77] to-[#9b5de5] h-2 rounded-full" style="width: 30%"></div>
+                </div>
+                <div class="grid grid-cols-3 gap-4 mt-4 text-center text-sm">
+                    <div>
+                        <p class="text-gray-500">Cấp số cộng</p>
+                        <p class="font-bold text-[#a2d2ff]">45%</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500">Cấp số nhân</p>
+                        <p class="font-bold text-[#ffcb77]">30%</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500">Dãy số đặc biệt</p>
+                        <p class="font-bold text-purple-500">15%</p>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Category Icons with 3D Effects -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <!-- Arithmetic Sequence Icon -->
+                <a href="exercises/cap-so-cong.html" class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 exercise-card" data-category="arithmetic">
+                    <div class="category-icon float-animation relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#a2d2ff] to-[#74c7ff] opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                        <i class="fas fa-plus-minus text-4xl text-[#a2d2ff] relative z-10 transform group-hover:scale-110 transition-transform duration-300"></i>
+                        <div class="absolute -inset-1 bg-gradient-to-r from-[#a2d2ff] to-[#74c7ff] rounded-full opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mt-4 text-[#a2d2ff]">Cấp số cộng</h3>
+                    <p class="text-gray-600 text-center mt-2">Khám phá và giải các bài toán về dãy số cộng</p>
+                    <div class="mt-4 flex flex-col items-center space-y-2">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">15+ Bài tập</span>
+                        <div class="w-full bg-gray-200 rounded-full h-1.5 mt-2">
+                            <div class="bg-[#a2d2ff] h-1.5 rounded-full" style="width: 45%"></div>
+                        </div>
+                        <span class="text-sm text-gray-500">45% hoàn thành</span>
+                    </div>
+                </a>
+                
+                <!-- Geometric Sequence Icon -->
+                <a href="exercises/cap-so-nhan.html" class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 exercise-card" data-category="geometric">
+                    <div class="category-icon float-animation relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#ffcb77] to-[#ffa26b] opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                        <i class="fas fa-times text-4xl text-[#ffcb77] relative z-10 transform group-hover:scale-110 transition-transform duration-300"></i>
+                        <div class="absolute -inset-1 bg-gradient-to-r from-[#ffcb77] to-[#ffa26b] rounded-full opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mt-4 text-[#ffcb77]">Cấp số nhân</h3>
+                    <p class="text-gray-600 text-center mt-2">Khám phá và giải các bài toán về dãy số nhân</p>
+                    <div class="mt-4 flex flex-col items-center space-y-2">
+                        <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">20+ Bài tập</span>
+                        <div class="w-full bg-gray-200 rounded-full h-1.5 mt-2">
+                            <div class="bg-[#ffcb77] h-1.5 rounded-full" style="width: 30%"></div>
+                        </div>
+                        <span class="text-sm text-gray-500">30% hoàn thành</span>
+                    </div>
+                </a>
+                
+                <!-- Special Sequences Icon -->
+                <a href="exercises/day-so-dac-biet.html" class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 exercise-card" data-category="special">
+                    <div class="category-icon float-animation relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#9b5de5] to-[#c77dff] opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                        <i class="fas fa-infinity text-4xl text-purple-500 relative z-10 transform group-hover:scale-110 transition-transform duration-300"></i>
+                        <div class="absolute -inset-1 bg-gradient-to-r from-[#9b5de5] to-[#c77dff] rounded-full opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mt-4 text-purple-500">Dãy số đặc biệt</h3>
+                    <p class="text-gray-600 text-center mt-2">Fibonacci, số chính phương và các dãy đặc biệt khác</p>
+                    <div class="mt-4 flex flex-col items-center space-y-2">
+                        <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">10+ Bài tập</span>
+                        <div class="w-full bg-gray-200 rounded-full h-1.5 mt-2">
+                            <div class="bg-purple-500 h-1.5 rounded-full" style="width: 15%"></div>
+                        </div>
+                        <span class="text-sm text-gray-500">15% hoàn thành</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Truy cập nhanh bài tập</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Arithmetic Links -->
+                    <div class="space-y-3">
+                        <h3 class="font-semibold text-lg text-[#a2d2ff] flex items-center gap-2">
+                            <i class="fas fa-plus-minus"></i>
+                            Cấp số cộng
+                        </h3>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="exercises/cap-so-cong.html#co-ban" class="text-gray-600 hover:text-[#a2d2ff] flex items-center gap-2">
+                                    <i class="fas fa-chevron-right text-sm"></i>
+                                    Bài tập cơ bản
+                                </a>
+                            </li>
+                            <li>
+                                <a href="exercises/cap-so-cong.html#nang-cao" class="text-gray-600 hover:text-[#a2d2ff] flex items-center gap-2">
+                                    <i class="fas fa-chevron-right text-sm"></i>
+                                    Bài tập nâng cao
+                                </a>
+                            </li>
+                            <li>
+                                <a href="exercises/cap-so-cong.html#ly-thuyet" class="text-gray-600 hover:text-[#a2d2ff] flex items-center gap-2">
+                                    <i class="fas fa-chevron-right text-sm"></i>
+                                    Lý thuyết trọng tâm
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Geometric Links -->
+                    <div class="space-y-3">
+                        <h3 class="font-semibold text-lg text-[#ffcb77] flex items-center gap-2">
+                            <i class="fas fa-xmark"></i>
+                            Cấp số nhân
+                        </h3>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="exercises/cap-so-nhan.html#co-ban" class="text-gray-600 hover:text-[#ffcb77] flex items-center gap-2">
+                                    <i class="fas fa-chevron-right text-sm"></i>
+                                    Bài tập cơ bản
+                                </a>
+                            </li>
+                            <li>
+                                <a href="exercises/cap-so-nhan.html#nang-cao" class="text-gray-600 hover:text-[#ffcb77] flex items-center gap-2">
+                                    <i class="fas fa-chevron-right text-sm"></i>
+                                    Bài tập nâng cao
+                                </a>
+                            </li>
+                            <li>
+                                <a href="exercises/cap-so-nhan.html#ly-thuyet" class="text-gray-600 hover:text-[#ffcb77] flex items-center gap-2">
+                                    <i class="fas fa-chevron-right text-sm"></i>
+                                    Lý thuyết trọng tâm
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Special Sequences Links -->
+                    <div class="space-y-3">
+                        <h3 class="font-semibold text-lg text-purple-500 flex items-center gap-2">
+                            <i class="fas fa-infinity"></i>
+                            Dãy số đặc biệt
+                        </h3>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="exercises/day-so-dac-biet.html#fibonacci" class="text-gray-600 hover:text-purple-500 flex items-center gap-2">
+                                    <i class="fas fa-chevron-right text-sm"></i>
+                                    Dãy Fibonacci
+                                </a>
+                            </li>
+                            <li>
+                                <a href="exercises/day-so-dac-biet.html#chinh-phuong" class="text-gray-600 hover:text-purple-500 flex items-center gap-2">
+                                    <i class="fas fa-chevron-right text-sm"></i>
+                                    Số chính phương
+                                </a>
+                            </li>
+                            <li>
+                                <a href="exercises/day-so-dac-biet.html#nguyen-to" class="text-gray-600 hover:text-purple-500 flex items-center gap-2">
+                                    <i class="fas fa-chevron-right text-sm"></i>
+                                    Số nguyên tố
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Cấp số cộng Section -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden" data-category="arithmetic">
+                <div class="bg-[#a2d2ff] px-6 py-4">
+                    <h3 class="text-xl font-bold text-white">Cấp số cộng</h3>
+                </div>
+                <div class="p-6">
+                    <!-- Example Exercise -->
+                    <div class="border rounded-lg p-6 mb-4 exercise">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                                Nhận biết
+                            </span>
+                            <span class="text-gray-500"><i class="fas fa-clock mr-2"></i>5 phút</span>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-gray-900">Cho cấp số cộng (u<sub>n</sub>) có u<sub>1</sub> = 2 và công sai d = 3. Tính u<sub>5</sub>.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <input type="radio" name="answer1" value="A" class="h-4 w-4 text-[#a2d2ff] focus:ring-[#a2d2ff] border-gray-300">
+                                <label class="ml-3 block text-gray-700">A) 14</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer1" value="B" class="h-4 w-4 text-[#a2d2ff] focus:ring-[#a2d2ff] border-gray-300">
+                                <label class="ml-3 block text-gray-700">B) 15</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer1" value="C" class="h-4 w-4 text-[#a2d2ff] focus:ring-[#a2d2ff] border-gray-300">
+                                <label class="ml-3 block text-gray-700">C) 16</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer1" value="D" class="h-4 w-4 text-[#a2d2ff] focus:ring-[#a2d2ff] border-gray-300">
+                                <label class="ml-3 block text-gray-700">D) 17</label>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <button onclick="checkAnswer('answer1')" class="bg-[#a2d2ff] hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                                Kiểm tra đáp án
+                            </button>
+                            <div id="result-answer1"></div>
+                            <div id="solution-answer1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cấp số nhân Section -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden" data-category="geometric">
+                <div class="bg-[#ffcb77] px-6 py-4">
+                    <h3 class="text-xl font-bold text-white">Cấp số nhân</h3>
+                </div>
+                <div class="p-6">
+                    <!-- Exercise 1 -->
+                    <div class="border rounded-lg p-6 mb-4 exercise">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800">
+                                Vận dụng
+                            </span>
+                            <span class="text-gray-500"><i class="fas fa-clock mr-2"></i>10 phút</span>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-gray-900">Một tỉnh có 2 triệu dân vào năm 2020 với tỉ lệ tăng dân số 1.5% một năm. Tính số dân của tỉnh đó sau 10 năm kể từ năm 2020.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <input type="radio" name="answer2" value="A" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">A) 2.32 triệu</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer2" value="B" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">B) 2.45 triệu</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer2" value="C" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">C) 2.52 triệu</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer2" value="D" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">D) 2.15 triệu</label>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <button onclick="checkAnswer('answer2')" class="bg-[#ffcb77] hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">
+                                Kiểm tra đáp án
+                            </button>
+                            <div id="result-answer2"></div>
+                            <div id="solution-answer2"></div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 2 -->
+                    <div class="border rounded-lg p-6 mb-4 exercise">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800">
+                                Vận dụng cao
+                            </span>
+                            <span class="text-gray-500"><i class="fas fa-clock mr-2"></i>15 phút</span>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-gray-900">Một gia đình mua một chiếc ô tô giá 800 triệu đồng. Trung bình sau mỗi năm sử dụng, giá trị còn lại của ô tô giảm đi 15% so với năm trước đó. Sau 5 năm, giá trị của ô tô ước tính còn bao nhiêu triệu đồng?</p>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <input type="radio" name="answer3" value="A" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">A) 350.8 triệu</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer3" value="B" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">B) 401.2 triệu</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer3" value="C" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">C) 425.6 triệu</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer3" value="D" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">D) 375.4 triệu</label>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <button onclick="checkAnswer('answer3')" class="bg-[#ffcb77] hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">
+                                Kiểm tra đáp án
+                            </button>
+                            <div id="result-answer3"></div>
+                            <div id="solution-answer3"></div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 3 -->
+                    <div class="border rounded-lg p-6 mb-4 exercise">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800">
+                                Vận dụng cao
+                            </span>
+                            <span class="text-gray-500"><i class="fas fa-clock mr-2"></i>15 phút</span>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-gray-900">Một loại vi khuẩn được nuôi cấy trong phòng thí nghiệm, cứ mỗi phút số lượng lại tăng lên gấp đôi số lượng đang có. Từ một vi khuẩn ban đầu, hãy tính tổng số vi khuẩn có trong ống nghiệm sau 20 phút.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <input type="radio" name="answer4" value="A" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">A) 1,048,575</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer4" value="B" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">B) 2,097,152</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer4" value="C" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">C) 1,048,576</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer4" value="D" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">D) 524,288</label>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <button onclick="checkAnswer('answer4')" class="bg-[#ffcb77] hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">
+                                Kiểm tra đáp án
+                            </button>
+                            <div id="result-answer4"></div>
+                            <div id="solution-answer4"></div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 4 -->
+                    <div class="border rounded-lg p-6 mb-4 exercise">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800">
+                                Vận dụng cao
+                            </span>
+                            <span class="text-gray-500"><i class="fas fa-clock mr-2"></i>15 phút</span>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-gray-900">Một công ty xây dựng mua một chiếc máy ủi với giá 3 tỉ đồng. Cứ sau mỗi năm sử dụng, giá trị của chiếc máy ủi này lại giảm 20% so với giá trị của nó trong năm liền trước đó. Tìm giá trị còn lại của chiếc máy ủi đó sau 5 năm sử dụng.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <input type="radio" name="answer5" value="A" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">A) 0.98 tỉ đồng</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer5" value="B" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">B) 1.05 tỉ đồng</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer5" value="C" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">C) 0.75 tỉ đồng</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer5" value="D" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">D) 1.25 tỉ đồng</label>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <button onclick="checkAnswer('answer5')" class="bg-[#ffcb77] hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">
+                                Kiểm tra đáp án
+                            </button>
+                            <div id="result-answer5"></div>
+                            <div id="solution-answer5"></div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 5 -->
+                    <div class="border rounded-lg p-6 mb-4 exercise">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                                Nhận biết
+                            </span>
+                            <span class="text-gray-500"><i class="fas fa-clock mr-2"></i>10 phút</span>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-gray-900">Một khay nước có nhiệt độ 20°C được đặt vào ngăn đá của tủ lạnh. Biết sau mỗi giờ, nhiệt độ của nước giảm 20%. Tính nhiệt độ của khay nước đó sau 6 giờ.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <input type="radio" name="answer6" value="A" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">A) 4.19°C</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer6" value="B" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">B) 3.28°C</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer6" value="C" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">C) 2.62°C</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer6" value="D" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">D) 5.24°C</label>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <button onclick="checkAnswer('answer6')" class="bg-[#ffcb77] hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">
+                                Kiểm tra đáp án
+                            </button>
+                            <div id="result-answer6"></div>
+                            <div id="solution-answer6"></div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 6 -->
+                    <div class="border rounded-lg p-6 mb-4 exercise">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                                Thông hiểu
+                            </span>
+                            <span class="text-gray-500"><i class="fas fa-clock mr-2"></i>10 phút</span>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-gray-900">Một người nhảy bungee từ một cây cầu và căng một sợi dây dài 100m. Sau mỗi lần rơi xuống, người nhảy được kéo lên một quãng đường có độ dài bằng 80% so với lần rơi trước và lại rơi xuống đúng bằng quãng đường vừa được kéo lên. Tính tổng quãng đường đi lên của người đó sau 10 lần được kéo lên.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <input type="radio" name="answer7" value="A" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">A) 385.93m</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer7" value="B" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">B) 401.87m</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer7" value="C" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">C) 425.32m</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer7" value="D" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">D) 412.71m</label>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <button onclick="checkAnswer('answer7')" class="bg-[#ffcb77] hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">
+                                Kiểm tra đáp án
+                            </button>
+                            <div id="result-answer7"></div>
+                            <div id="solution-answer7"></div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 7 -->
+                    <div class="border rounded-lg p-6 mb-4 exercise">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-red-100 text-red-800">
+                                Vận dụng cao
+                            </span>
+                            <span class="text-gray-500"><i class="fas fa-clock mr-2"></i>20 phút</span>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-gray-900">Anh Nam là một cầu thủ bóng đá chuyên nghiệp. Anh vừa kí hợp đồng 5 năm với một câu lạc bộ với mức lương năm khởi điểm là 300 triệu đồng. Mỗi năm lương sẽ tăng thêm 10% so với lương năm trước đó. Tính tổng số tiền lương anh Nam nhận được sau 5 năm.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <input type="radio" name="answer8" value="A" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">A) 1,775.5 triệu đồng</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer8" value="B" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">B) 1,830.2 triệu đồng</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer8" value="C" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">C) 1,850.7 triệu đồng</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer8" value="D" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">D) 1,802.4 triệu đồng</label>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <button onclick="checkAnswer('answer8')" class="bg-[#ffcb77] hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">
+                                Kiểm tra đáp án
+                            </button>
+                            <div id="result-answer8"></div>
+                            <div id="solution-answer8"></div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 8 -->
+                    <div class="border rounded-lg p-6 mb-4 exercise">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-100 text-purple-800">
+                                Thông hiểu
+                            </span>
+                            <span class="text-gray-500"><i class="fas fa-clock mr-2"></i>15 phút</span>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-gray-900">Bác Năm gửi tiết kiệm vào ngân hàng 100 triệu đồng với hình thức lãi kép, kì hạn một năm với lãi suất 8%/năm. Tính số tiền cả gốc và lãi bác Năm nhận được sau 10 năm. (Giả sử lãi suất không thay đổi trong suốt thời gian gửi tiền.)</p>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <input type="radio" name="answer9" value="A" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">A) 215.89 triệu đồng</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer9" value="B" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">B) 225.67 triệu đồng</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer9" value="C" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">C) 205.43 triệu đồng</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer9" value="D" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">D) 235.92 triệu đồng</label>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <button onclick="checkAnswer('answer9')" class="bg-[#ffcb77] hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">
+                                Kiểm tra đáp án
+                            </button>
+                            <div id="result-answer9"></div>
+                            <div id="solution-answer9"></div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 9 -->
+                    <div class="border rounded-lg p-6 mb-4 exercise">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                                Nhận biết
+                            </span>
+                            <span class="text-gray-500"><i class="fas fa-clock mr-2"></i>10 phút</span>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-gray-900">Một tháp 10 tầng có diện tích sàn của tầng dưới cùng là 400m². Tính diện tích mặt sàn tầng trên cùng, biết rằng diện tích mặt sàn mỗi tầng bằng nửa diện tích mặt sàn tầng ngay bên dưới.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <input type="radio" name="answer10" value="A" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">A) 0.78125m²</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer10" value="B" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">B) 1.5625m²</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer10" value="C" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">C) 0.390625m²</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="answer10" value="D" class="h-4 w-4 text-[#ffcb77] focus:ring-[#ffcb77] border-gray-300">
+                                <label class="ml-3 block text-gray-700">D) 3.125m²</label>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <button onclick="checkAnswer('answer10')" class="bg-[#ffcb77] hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">
+                                Kiểm tra đáp án
+                            </button>
+                            <div id="result-answer10"></div>
+                            <div id="solution-answer10"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 mt-12">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-white">
+                <p>© 2024 TRẮC NGHIỆM TOÁN 11 - DÃY SỐ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Scripts -->
+    <script src="scripts.js"></script>
+</body>
+</html>
